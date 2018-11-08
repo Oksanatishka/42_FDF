@@ -1,0 +1,113 @@
+Fdf means 'Fil de Fer' or 'Wire frame' in english and our goal will be to draw a map in relief. 
+Thus it's a small cartography software that can be seen as Google maps but worse.
+MinilibX enable us to create a window, to display pixels inside, to draw a pixel, to handle a few events.
+
+So we have x and y coordinate system in which values such as 10 means an altitude of z coordinate in 3D map.
+
+> cat maps/42.fdf
+> make
+>./fdf maps/42.fdf  // launch the 42 map
+
+little graphical window
+- change the altitude
+- zoom, move inside
+- bonus: rotations to turn the map, or fill this map with colors to give a small deep effect, handle hidden sides, 
+change the color range, do an rainbow effect.
+
+display a line: drawing line algorithm will be to draw lines in every direction and every orientation.
+Bresenham algorithm in Wikipedia. The aim is to dram line from Point A to Point B on pixels.
+
+Projections:
+- isometric 
+- parallel
+- conical
+
+====================================================================================================
+
+MLX: the MinilibX!
+Simple a small homemade library, which will allow you to open windows on the screen and make pretty drawings inside.
+To allow you quickly access graphic projects.
+
+Several man of the MinilibX:
+1) ~mlx: man /usr/share/man/man3/mlx.1 //what the MinilibX is about, how it works, define the include you have to put 
+in your program. What is the first absolutely essential f-n that connects you to the Mac's graphical server: mlx_init ();
+How you will be able to compile you MinilibX on MacOS.
+2) ~mlx: man /usr/share/man/man3/mlx_new_window.1
+3) ~mlx: man /usr/share/man/man3/mlx_pixel_put.1
+4) ~mlx: man /usr/share/man/man3/mlx_loop.1
+
+
+EXAMPLE.
+~mlx: emacs -nw main.c
+// we will open a window
+#include "mlx.h"
+int main() {
+    void *mlx_ptr;
+    void *win_ptr;
+
+    mlx_ptr = mlx_init(); // returns a void*, it's just a connection login to the graphical server.
+    win_ptr = mlx_new_window(mlx_ptr, 500, 500, "mlx 42");
+    mlx_loop(mlx_ptr);
+}
+
+// complile all this
+~mlx: cc -I /usr/local/include main.c -L /usr/local/lib/ -lmlx -framework OpenGL -framework AppKit
+// execute
+~mlx: ./a.out
+// the window opens on the screen!
+
+====================================================================================================
+Management of the events.
+The events are when the user will use the keyboard or the mouse and you will be able to retrieve the info in your program.
+
+
+EXAMPLE.
+~mlx: emacs -nw main.c
+// we will open a window
+#include <unistd.h>
+#include "mlx.h"
+
+int ft_putchar(char c)
+{
+    write(1, &c, 1);
+}
+
+int deal_key(int key, void *param)
+{
+    ft_putchar('X');
+    mlx_pixel_put(mlx_ptr, win_ptr, );
+    return (0);
+}
+
+int main() 
+{
+    void *mlx_ptr;
+    void *win_ptr;
+
+    mlx_ptr = mlx_init(); // returns a void*, it's just a connection login to the graphical server.
+    win_ptr = mlx_new_window(mlx_ptr, 500, 500, "mlx 42");
+    mlx_pixel_put(mlx_ptr, win_ptr, 250, 250, 0xFFFFFF);
+    mlx_key_hook(win_ptr, deal_key, (void *)0;
+    mlx_loop(mlx_ptr);
+}
+
+====================================================================================================
+====================================================================================================
+====================================================================================================
+
+Resources: 
+- https://github.com/VBrazhnik/FdF/wiki
+- library man page http://files.achedeuzot.me/42/mlx/man/
+
+To draw a line you can use: 
+- Bresenham's line https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm (simpler solution) or 
+- Xiaolin Wu's line https://en.wikipedia.org/wiki/Xiaolin_Wu%27s_line_algorithm (more sophisticated 
+solution which will produced more beautiful result).
+
+How do I figure out if my program has a memory leak?
+There's a ton of ways to see if your program has memory leaks and one of the easiest ways to do so is 
+through the leaks command on all of the lab computers! The easiest way I found to use leaks is to 
+simply add an infinite loop at the end of your program and then have another Terminal window open to 
+run the leaks command on! 
+while(1)
+        ;
