@@ -141,7 +141,19 @@ Event-driven programming is a programming paradigm in which the flow of the prog
 such as user actions (mouse clicks, key presses), sensor outputs, or messages from other programs/threads.
 
 
+mlx_init            To create connection between your software and the display.
+mlx_new_window      To create a new window on the screen.
+mlx_loop            To receive events.
+
+F-n to parse the data to the program - acquire_xyz (opening the map file, then call the function that reads it into a list of strings (containing the lines)):
+1. read_map_to_lst  (reads the lines of the map file and stores them in a linked list)
+2. ft_lstdel2   (??? from libft)
+3. chr_mtx_3d   (splits the lines acquired into matrix elements of text)
+4. lines_are_uniform    (makes sure that the number of values in every line is the same)
+5.
+6.
+7. free_mtx_chr     (???)
+8. pts_mtx_3d   (sets the struct of the points with the values that it should have.)
 
 
-
-
+matrix.c - perspective & rotation
