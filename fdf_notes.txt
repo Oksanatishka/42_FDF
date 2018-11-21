@@ -111,3 +111,22 @@ simply add an infinite loop at the end of your program and then have another Ter
 run the leaks command on! 
 while(1)
         ;
+
+
+====================================================================================================
+====================================================================================================
+====================================================================================================
+
+Makefile
+
+Recommended compiler and linker flags for GCC: 
+https://gcc.gnu.org/onlinedocs/gcc/Invoking-GCC.html
+https://developers.redhat.com/blog/2018/03/21/compiler-and-linker-flags-gcc/
+https://stackoverflow.com/questions/3375697/useful-gcc-flags-for-c
+
+-Wall	Recommended compiler warnings.
+-Werror Make all warnings into errors.
+-Wextra This enables some extra warning flags that are not enabled by -Wall.
+-g      Generate debugging information
+-O      optimizations
+
