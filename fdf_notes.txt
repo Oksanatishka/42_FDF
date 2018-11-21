@@ -140,6 +140,8 @@ https://stackoverflow.com/questions/3375697/useful-gcc-flags-for-c
 Event-driven programming is a programming paradigm in which the flow of the program is determined by events 
 such as user actions (mouse clicks, key presses), sensor outputs, or messages from other programs/threads.
 
+Mlx man - http://files.achedeuzot.me/42/mlx/man/
+To open manual from the project folder go to /minilibx_macos/man directory, then type 'man man3/mlx.1'
 
 mlx_init            To create connection between your software and the display.
 mlx_new_window      To create a new window on the screen.
@@ -155,5 +157,39 @@ F-n to parse the data to the program - acquire_xyz (opening the map file, then c
 7. free_mtx_chr     (???)
 8. pts_mtx_3d   (sets the struct of the points with the values that it should have.)
 
-
+====================================================================================================
 matrix.c - perspective & rotation
+
+1. Isometric projection is a method for visually representing three-dimensional objects in two dimensions in technical and engineering drawings.
+2. A parallel projection is a projection of an object in three-dimensional space onto a fixed plane, known as the projection plane or image plane, where the rays, known as lines of sight or projection lines, are parallel to each other. 
+3. 
+
+Graphic book (rus) (useful rotation formulas on page 27) - https://drive.google.com/open?id=1OVFNf9yHI-GYe_eCYDklXN4QxhVMkuVD
+Матрица поворота https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0_%D0%BF%D0%BE%D0%B2%D0%BE%D1%80%D0%BE%D1%82%D0%B0
+http://www.songho.ca/opengl/gl_anglestoaxes.html
+
+Поворот вокруг оси x на угол γ:
+X = x 
+Y = y cosγ + z sinγ
+Z = -y sinγ + z cosγ
+
+Поворот вокруг оси y на угол γ:
+X = x cosγ + z sinγ
+Y = y
+Z = -x sinγ + z cosγ
+
+Поворот вокруг оси z на угол γ:
+X = x cosγ + y sinγ
+Y = -x sinγ + y cosγ
+Z = z 
+
+====================================================================================================
+
+DDA method (Digital differential analyzer): 
+https://www.tutorialspoint.com/computer_graphics/line_generation_algorithm.htm
+https://en.wikipedia.org/wiki/Digital_differential_analyzer_(graphics_algorithm)
+Example: https://www.geeksforgeeks.org/dda-line-generation-algorithm-computer-graphics/
+
+====================================================================================================
+
+
