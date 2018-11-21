@@ -28,6 +28,10 @@ MLX: the MinilibX!
 Simple a small homemade library, which will allow you to open windows on the screen and make pretty drawings inside.
 To allow you quickly access graphic projects.
 
+- to open a window, 
+- light a pixel and 
+- deal with events linked to this window: keyboard and mouse
+
 Several man of the MinilibX:
 1) ~mlx: man /usr/share/man/man3/mlx.1 //what the MinilibX is about, how it works, define the include you have to put 
 in your program. What is the first absolutely essential f-n that connects you to the Mac's graphical server: mlx_init ();
@@ -129,4 +133,15 @@ https://stackoverflow.com/questions/3375697/useful-gcc-flags-for-c
 -Wextra This enables some extra warning flags that are not enabled by -Wall.
 -g      Generate debugging information
 -O      optimizations
+
+====================================================================================================
+
+“events” programming 
+Event-driven programming is a programming paradigm in which the flow of the program is determined by events 
+such as user actions (mouse clicks, key presses), sensor outputs, or messages from other programs/threads.
+
+
+
+
+
 
