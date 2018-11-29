@@ -13,8 +13,9 @@
 #include "./../includes/fdf.h"
 
 /*
-** (Extends the reach of the keyboard)
 ** Changes the parameters for zooming.
+** keycode == 4 - zoom in
+** keycode == 5 - zoom out
 */
 
 void	chng_ang_all(t_win *win)
@@ -34,7 +35,6 @@ void	chng_ang_all(t_win *win)
 }
 
 /*
-** (Extends the reach of the keyboard)
 ** Changes the parameters for altering and individual axis.
 */
 
@@ -55,7 +55,6 @@ void	chng_axs_par(t_win *win)
 }
 
 /*
-** (Extends the reach of the keyboard)
 ** Changes the parameters for position in the screen.
 */
 
@@ -72,7 +71,6 @@ void	chng_pos_lin(t_win *win)
 }
 
 /*
-** (Extends the reach of the keyboard)
 ** Changes the parameters for rotation.
 */
 
@@ -93,7 +91,6 @@ void	chng_pos_ang(t_win *win)
 }
 
 /*
-** (Extends the reach of the keyboard)
 ** Changes the parameter for perspective.
 */
 

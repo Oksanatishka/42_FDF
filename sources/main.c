@@ -84,7 +84,7 @@ t_win	*init_window(char *arg)
 		return (NULL);
 	win->m_p = mlx_init();
 	win->w_p = mlx_new_window(win->m_p, W_W, W_H,
-										"fdf 42 - obibik");
+										"fdf 42");
 	clear_img(win);
 	if (acquire_xyz(&win, arg) != 1)
 		return (NULL);
